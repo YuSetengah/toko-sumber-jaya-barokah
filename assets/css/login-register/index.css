@@ -1,0 +1,104 @@
+/* Tampilan halaman login / daftar (dipakai admin/login/index.php) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* pembungkus: logo + kartu */
+.log_reg {
+    width: 100%;
+    max-width: 400px;
+    margin: 8vh auto 0;
+    padding: 0 16px 32px;
+}
+
+.log_reg > center { margin-bottom: 18px; }
+.log_reg > center a { display: inline-block; }
+.log_reg > center img { width: 64px; height: 64px; object-fit: contain; }
+
+/* kartu putih */
+.box_log_reg {
+    background: #fff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+}
+
+.box_log_reg h1 {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+/* kolom isian */
+.form_log_reg + .form_log_reg { margin-top: 12px; }
+.form_log_reg p { color: #b71c1c; font-size: 12px; margin-bottom: 4px; }
+.form_log_reg p:empty { display: none; }
+
+.input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fff;
+}
+.input:focus { outline: 2px solid #f5a623; border-color: #f5a623; }
+
+/* tombol */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 18px;
+    padding: 11px;
+    border-radius: 8px;
+    background: #f5a623;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+.button:hover { background: #e0951a; }
+.button p { color: #fff; font-size: 15px; }
+
+/* keadaan memuat: tersembunyi dulu, ditampilkan oleh JavaScript saat proses login */
+#masuk_loading { display: none; }
+#masuk_loading .button { cursor: default; background: #f5a623; }
+#masuk_loading .button:hover { background: #f5a623; }
+#loading_masuk, .loading_s { width: 22px; height: 22px; }
+
+/* tempat pesan hasil login (mis. "Email atau password salah") */
+.res, #res {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 16px;
+    text-align: center;
+    font-size: 14px;
+}
+.res:empty, #res:empty { display: none; }
+.res p, #res p { padding: 10px 12px; border-radius: 8px; background: #fdecea; color: #b71c1c; }
+
+/* tautan daftar di bawah judul */
+.box_log_reg h4 { font-size: 14px; font-weight: normal; color: #555; margin: -6px 0 16px; }
+.box_log_reg h4 a { color: #e0951a; text-decoration: none; font-weight: bold; }
+
+/* tombol "Masuk Dengan Google" */
+.log_reg_social a { display: block; text-decoration: none; }
+.isi_log_reg_social {
+    display: flex; align-items: center; justify-content: center;
+    padding: 10px; border: 1px solid #ccc; border-radius: 8px; background: #fff; cursor: pointer;
+}
+.isi_log_reg_social:hover { background: #f7f7f7; }
+.isi_log_reg_social img { width: 20px; height: 20px; margin-right: 10px; }
+.isi_log_reg_social p { font-size: 15px; font-weight: bold; color: #333; }
+
+/* garis pemisah + teks "Atau masuk dengan" */
+.line_log_reg { height: 1px; background: #e5e5e5; margin: 18px 0 10px; }
+.text_line_log_reg { font-size: 13px; color: #777; margin-bottom: 12px; }

@@ -1,0 +1,21 @@
+# ===== Aturan Apache untuk toko online =====
+Options -Indexes
+
+RewriteEngine On
+
+# category/list/3  ->  category/list.php?idkategori=3
+RewriteRule ^category/list/([0-9]+)/?$ category/list.php?idkategori=$1 [L,QSA]
+
+# admin/transaction/print/12  ->  admin/transaction/print/index.php?idinvoiceprint=12
+RewriteRule ^admin/transaction/print/([0-9]+)/?$ admin/transaction/print/index.php?idinvoiceprint=$1 [L,QSA]
+
+# Berkas rahasia tidak boleh dibuka dari browser
+<FilesMatch "^(env\.php|env\.sample\.php|README\.md|\.gitignore|\.gitattributes|.*\.sql|.*\.log)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>

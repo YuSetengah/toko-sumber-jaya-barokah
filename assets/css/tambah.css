@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef3fb;
+    color: #1f2937;
+}
+
+.sisi {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 230px;
+    background: #2563eb;
+    color: #fff;
+    padding: 22px 14px;
+    overflow-y: auto;
+}
+
+.sisi .merek {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 8px 22px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.sisi .merek img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.sisi a {
+    display: block;
+    padding: 11px 14px;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    color: #dbeafe;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sisi a:hover {
+    background: rgba(255, 255, 255, .15);
+    color: #fff;
+}
+
+.sisi a.aktif {
+    background: #fbbf24;
+    color: #1f2937;
+    font-weight: bold;
+}
+
+.isi {
+    margin-left: 230px;
+    padding: 28px;
+    max-width: 1100px;
+}
+
+.isi h1 {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.isi h2 {
+    font-size: 16px;
+    margin: 24px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.kartu {
+    background: #fff;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 14px 0 5px;
+}
+
+input[type=text], input[type=number], select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    background: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+.baris2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.baris3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+}
+
+.varian {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.varian.dua {
+    grid-template-columns: 1fr 1fr;
+}
+
+.gambar-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.slot {
+    border: 2px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+    color: #64748b;
+    min-height: 132px;
+}
+
+.slot input[type=file] {
+    width: 100%;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+.slot img {
+    display: block;
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 6px;
+}
+
+.catatan {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button.abu {
+    background: #e5e7eb;
+    color: #374151;
+    margin-top: 10px;
+}
+
+button.abu:hover {
+    background: #d1d5db;
+}
+
+button.besar {
+    width: 100%;
+    padding: 14px;
+    margin-top: 22px;
+    font-size: 15px;
+    background: #f59e0b;
+    color: #1f2937;
+}
+
+button.besar:hover {
+    background: #d98a06;
+}
+
+.pesan {
+    padding: 11px 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.sukses {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.gagal {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.geser {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th, td {
+    padding: 9px 8px;
+    border-bottom: 1px solid #eef0f3;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background: #f8fafc;
+    white-space: nowrap;
+}
+
+td img {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #f1f5f9;
+}
+
+@media (max-width: 900px) {
+    .sisi {
+        position: static;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 12px;
+    }
+
+    .sisi .merek {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .sisi a {
+        margin: 0;
+    }
+
+    .isi {
+        margin-left: 0;
+        padding: 16px;
+    }
+
+    .baris2, .baris3 {
+        grid-template-columns: 1fr;
+    }
+
+    .gambar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.isi h2.judul-awal {
+    margin-top: 0;
+}
+
+.catatan-varian {
+    margin-bottom: 8px;
+}

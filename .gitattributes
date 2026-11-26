@@ -1,0 +1,9 @@
+# Samakan akhir baris (Windows vs Linux) agar riwayat perubahan tidak berantakan
+* text=auto eol=lf
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.zip  binary

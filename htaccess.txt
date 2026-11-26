@@ -1,0 +1,11 @@
+# Ganti nama file ini menjadi .htaccess dan letakkan di folder utama proyek
+# (C:\xampp\htdocs\toko_sumber_jaya_barokah\.htaccess)
+# Jika sudah punya .htaccess, tambahkan saja baris RewriteRule di bawah.
+RewriteEngine On
+RewriteBase /toko_sumber_jaya_barokah/
+
+# category/list/3  ->  category/list.php?idkategori=3
+RewriteRule ^category/list/([0-9]+)/?$ category/list.php?idkategori=$1 [L,QSA]
+
+# admin/transaction/print/12  ->  admin/transaction/print/index.php?idinvoiceprint=12
+RewriteRule ^admin/transaction/print/([0-9]+)/?$ admin/transaction/print/index.php?idinvoiceprint=$1 [L,QSA]

@@ -1,0 +1,21 @@
+# ===== Rahasia: JANGAN PERNAH di-commit =====
+env.php
+
+# ===== Gambar unggahan (disimpan di server, bukan di repositori) =====
+# Folder tetap ada karena file .htaccess di dalamnya ikut disimpan.
+assets/image/product/*
+!assets/image/product/.htaccess
+assets/image/banner/*
+!assets/image/banner/.htaccess
+assets/image/profile/*
+!assets/image/profile/.htaccess
+assets/icons/category/*
+!assets/icons/category/.htaccess
+
+# ===== Berkas pengujian & sampah editor/sistem =====
+testlogin.php
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
